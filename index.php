@@ -19,7 +19,7 @@
 
 			<?php
 			// Seleciona a assinatura exemplo
-			$sig = "imgs/example.fw.png";
+			$sig = "imgs/example.png";
 
 			?>
 
