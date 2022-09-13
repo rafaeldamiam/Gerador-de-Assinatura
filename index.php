@@ -64,7 +64,7 @@
 				<div class="form-row p-2 m-2 text-center">
 					<div class="form-group col-12">
 						<!-- ENVIAR -->
-						<input type="button" class="btn btn-success" type="submit" value="Criar">
+						<input class="btn btn-success" type="submit" value="Criar">
 					</div>
 				</div>
 			</form>
