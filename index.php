@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Gerador de Assinatura</title>
-	<link rel="icon" type="image/x-icon" href="imgs/favicon.png">
+	<link rel="icon" type="image/x-icon" href="./imgs/favicon.png">
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<!-- JavaScript Bundle with Popper -->
@@ -25,7 +25,7 @@
 
 			<?php
 			// Seleciona a assinatura exemplo
-			$sig = "imgs/example.png";
+			$sig = "./imgs/example.png";
 
 			?>
 			<div class="container">
@@ -128,7 +128,7 @@
 				echo "<script> alert('Preencha todos os campos'); </script> ";
 			} else {
 				// Cria imagem editavel apartir da imagem empty
-				$img = imagecreatefrompng('imgs/empty.png');
+				$img = imagecreatefrompng('./imgs/empty.png');
 				// Seleciona a cor do texto
 				$txtColor = imagecolorallocate($img, 85, 102, 66);
 				//imagettftext(image, size, angle, x, y, color, fontfile, text)
@@ -143,11 +143,11 @@
 				// ESCREVE RAMAL
 				imagettftext($img, 11, 0, 330, 88, $txtColor, "arialRegular.ttf", $branch);
 				// Exporta a imagem pra png
-				imagepng($img, "imgs/assinatura.png");
+				imagepng($img, "./imgs/assinatura.png");
 				// Destroi a imagem editavel criada
 				imagedestroy($img);
 				//Seleciona a assinatura real
-				$sig = "imgs/assinatura.png";
+				$sig = "./imgs/assinatura.png";
 			}
 		}
 		//Exibe a assinatura no HTML
